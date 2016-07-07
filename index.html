@@ -27,7 +27,9 @@
 		}
 		.container {
 			width: 1024px;
+			max-width: 90%;
 			margin: 0 auto;
+			padding: 0 20px;
 		}
 		.Section-title {
 			font-size: 2em;
@@ -62,11 +64,17 @@
 		.Work {}
 		.Contact {}
 		.Contact-links {
+			height: 30px;
 			margin-left: 0;
 			padding-left: 0;
 		}
+		.Contact-links:before,
+		.Contact-links:after {
+			clear: both;
+		}
 		.Contact-links li {
 			float: left;
+			display: block;
 			text-align: center;
 		}
 		.Contact-links li:not(:first-child) {
@@ -74,6 +82,9 @@
 		}
 		.Contact-links a {
 			text-decoration: none;
+		}
+		.Footer {
+			margin: 20px 0;
 		}
 	</style>
 
@@ -116,6 +127,7 @@
 			</ul>
 		</section>
 
+		<section class="Footer"></section>
 	</div>
 </body>
 </html>
