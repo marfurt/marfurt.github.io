@@ -1,0 +1,202 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+$text-color: rgba(0, 0, 0, 0.87);
+$secondary-text: rgba(0, 0, 0, 0.54);
+$break-size: 768px;
+
+html, body {
+	color: $text-color;
+	font-size: 22px;
+	font-weight: 300;
+	font-family: "Source Sans Pro", "SF Pro Display", "HelveticaNeue", "Helvetica", Arial, sans-serif;
+}
+a {
+	color: $secondary-text;
+	text-decoration: none;
+
+	&:hover {
+		color: $text-color;
+		text-decoration: underline;
+	}
+}
+pre {
+	padding: 10px;
+	background: rgba(238, 238, 238, 0.35);
+	border-radius: 3px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
+}
+.container {
+	width: 1024px;
+	max-width: 90%;
+	margin: 0 auto;
+	padding: 50px 0px;
+}
+.Section-title {
+	font-size: 2em;
+	font-weight: 400;
+}
+.Section-subtitle {
+	color: $secondary-text;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.Profile {
+	float: left;
+	margin: 50px 0;
+	width: 280px;
+	text-align: center;
+
+	@media screen and (max-width: $break-size) {
+		float: none;
+		width: 100%;
+		clear: both;
+	}
+}
+.Profile-picture {
+	width: 230px;
+	height: 230px;
+	border-radius: 50%;
+}
+.Profile-name {
+	margin: 10px;
+	font-size: 34px;
+	font-weight: 600;
+}
+.Profile-contact {
+	height: 30px;
+	margin-left: 0;
+	padding-left: 0;
+}
+.Profile-link {
+	a {
+		text-decoration: none;
+	}
+	&:not(:first-child) {
+		padding-left: 20px;
+	}
+}
+.About {
+	margin-left: 350px;
+
+	@media screen and (max-width: $break-size) {
+		margin-left: 0;
+	}
+}
+.About-skills {}
+.Projects {
+	margin-left: 350px;
+
+	@media screen and (max-width: $break-size) {
+		margin-left: 0;
+	}
+}
+.Post {}
+.Post-header {}
+.Post-title {
+	font-size: 2em;
+	font-weight: 400;
+
+	a {
+		color: $text-color;
+		text-decoration: none;
+	}
+}
+.Post-meta {}
+.Post-content {}
+.Post-extra {}
+.Docs {
+	article {
+		padding: 0;
+		margin-left: 300px;
+		line-height: 1.5em;
+
+		h1:after {
+			content: '';
+			display: block;
+			margin: 20px 0 0;
+			width: 50px;
+			height: 1px;
+			background-color: $secondary-text;
+		}
+
+		h2 {}
+		h2:before {
+			content: "#";
+			margin-left: -25px;
+			position: absolute;
+			font-size: 28px;
+			color: $secondary-text;
+		}
+	}
+}
+.Docs-title {}
+.Docs-lead {}
+.Footer {
+	margin: 40px 0 20px 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.17);
+}
+.Navigation {
+	padding: 20px 0;
+	text-align: center;
+
+	a {
+		margin-left: 20px;
+		font-weight: 400;
+		color: $text-color;
+	}
+	a:hover {
+		text-decoration: none;
+		border-bottom: 2px solid $text-color;
+	}
+}
+.Sidebar {
+	float: left;
+	width: 200px;
+	padding: 10px;
+	font-size: 0.7em;
+	border-right: 1px solid rgba(0, 0, 0, .1);
+
+	a {
+		color: $text-color;
+
+		&:hover {
+			text-decoration: none;
+			color: black;
+
+			&:before {
+				content: "|";
+				margin-left: -10px;
+				position: absolute;
+				color: $text-color;
+			}
+		}
+	}
+}
+.Sidebar-group {
+	display: block;
+	margin: 20px 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	ul > li {
+		margin: 0;
+		padding: 0 0 0 8px;
+		line-height: 30px;
+		font-weight: 300;
+	}
+	.active {
+	}
+}
+.Sidebar-title {
+	font-weight: 600;
+	line-height: 30px;
+}

@@ -1,0 +1,26 @@
+---
+layout: docs
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+	{% include head.html %}
+
+	<body class="Docs">
+		{% include header.html %}
+
+		<main class="container">
+			{% include docs-sidebar.html %}
+	
+			<article>
+				<h1 class="Docs-title">{{ page.title | smartify }}</h1>
+				<p class="Docs-lead">{{ page.description | smartify }}</p>
+				{{ content }}
+			</article>
+
+			{% include footer.html %}
+		</main>
+
+	</body>
+</html>

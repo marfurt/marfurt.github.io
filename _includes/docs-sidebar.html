@@ -1,0 +1,36 @@
+<nav class="Sidebar">
+	{%- assign page_slug = page.url | split: '/' | last -%}
+	{%- for group in site.data.docs-nav -%}
+	{%- assign link = group.pages | first -%}
+	{%- assign link_slug = link.title | slugify -%}
+	{%- assign group_slug = group.title | slugify -%}
+	{%- assign active = nil -%}
+	
+	{%- if page.group == group_slug -%}
+		{%- assign active = 'active' -%}
+	{%- endif -%}
+	
+	<div class="Sidebar-group{% unless active == nil %} {{ active }}{% endunless %}">
+		<a class="Sidebar-title" href="/docs/{{ group_slug }}/{{ link_slug }}{% if link_slug %}/{% endif %}">
+			{{ group.title }}
+		</a>
+	
+		<ul>
+			{%- for doc in group.pages -%}
+			{%- assign doc_slug = doc.title | slugify -%}
+			{%- assign active = nil -%}
+	
+			{%- if page.group == group_slug and page_slug == doc_slug -%}
+				{%- assign active = 'active' -%}
+			{%- endif -%}
+	
+			<li{% unless active == nil %} class="{{ active }}"{% endunless %}>
+				<a href="/docs/{{ group_slug }}/{{ doc_slug }}/">
+				{{ doc.title }}
+				</a>
+			</li>
+			{%- endfor -%}
+		</ul>
+		</div>
+	{%- endfor -%}
+</nav>
