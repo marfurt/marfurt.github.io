@@ -15,48 +15,67 @@
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,400italic,600" rel="stylesheet" type="text/css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 	<link href="/assets/main.css" rel="stylesheet">
+	<link href="/assets/syntax.css" rel="stylesheet">
 </head>
 
 	<body class="Docs">
-		<header class="Header"></header>
-
-		<main class="container">
-			<nav class="Sidebar"><div class="Sidebar-group">
-		<a class="Sidebar-title" href="/docs/mobile/">
-			Mobile
-		</a>
-	
-		<ul></ul>
-		</div><div class="Sidebar-group">
-		<a class="Sidebar-title" href="/docs/web/">
-			Web
-		</a>
-	
-		<ul></ul>
-		</div><div class="Sidebar-group">
-		<a class="Sidebar-title" href="/docs/tools/">
-			Tools
-		</a>
-	
-		<ul></ul>
-		</div></nav>
-	
-			<article>
-				<h1 class="Docs-title">Documentation</h1>
-				<p class="Docs-lead"></p>
-				
-			</article>
-
-			<section class="Footer">
+		<div class="container">
+			<header class="Header">
 	<nav class="Navigation">
 		<a href="/">About</a>
 		<a href="/posts">Articles</a>
 		<a href="/docs">Docs</a>
-		<a href="https://judoshiaiapp.com" target="_blank">Judo Shiai App</a>
+		<a href="#" class="toggle-sidebar">☰</a>
 	</nav>
-</section>
+</header>
 
-		</main>
+			<nav id="DocsSidebar" class="Sidebar">
+	<a href="#" class="toggle-sidebar">&times;</a><div class="Sidebar-group">
+		<a class="Sidebar-title" href="/docs/mobile/xcode-tips/">
+			Mobile
+		</a>
+	
+		<ul><li>
+				<a href="/docs/mobile/xcode-tips/">Xcode Tips</a>
+			</li></ul>
+	</div><div class="Sidebar-group">
+		<a class="Sidebar-title" href="/docs/web/gzip-compression/">
+			Web
+		</a>
+	
+		<ul><li>
+				<a href="/docs/web/gzip-compression/">Gzip Compression</a>
+			</li><li>
+				<a href="/docs/web/restful-web-services/">Restful Web Services</a>
+			</li></ul>
+	</div><div class="Sidebar-group">
+		<a class="Sidebar-title" href="/docs/tools/remote-access-and-keys/">
+			Tools
+		</a>
+	
+		<ul><li>
+				<a href="/docs/tools/remote-access-and-keys/">Remote Access and Keys</a>
+			</li></ul>
+	</div></nav>
+	
+			<article>
+				<h1 class="Docs-title">Documentation</h1>
+				<!--<p class="Docs-lead"></p>-->
+				
+			</article>
 
+			<section class="Footer"></section>
+
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.toggle-sidebar').click(function(e) {
+					$('.Sidebar').toggleClass('toggled');
+					e.preventDefault();
+				});
+			});
+		</script>
 	</body>
 </html>

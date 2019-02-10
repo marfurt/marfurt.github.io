@@ -1,8 +1,12 @@
 - title: Mobile
   pages:
+    - title: Xcode Tips
 
 - title: Web
   pages:
+    - title: Gzip Compression
+    - title: Restful Web Services
 
 - title: Tools
   pages:
+    - title: Remote Access and Keys
