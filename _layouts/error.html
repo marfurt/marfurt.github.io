@@ -3,15 +3,9 @@
 
 	{% include head.html %}
 
-	<body class="{{ page.class | default: '' }}">
+	<body>
 		<div class="container">
-			{% include header.html %}
-
-			<main>
-				{{ content }}
-			</main>
-
-			{% include footer.html %}
+			{{ content }}
 		</div>
 	</body>
 </html>

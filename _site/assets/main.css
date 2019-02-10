@@ -13,16 +13,117 @@ a {
 
 pre {
   padding: 10px;
-  background: rgba(238, 238, 238, 0.35);
+  background: #f5f6fa;
   border-radius: 3px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125); }
 
+hr {
+  max-width: 60%;
+  margin: 40px auto;
+  color: rgba(0, 0, 0, 0.54); }
+
 .container {
   width: 1024px;
   max-width: 90%;
-  margin: 0 auto;
-  padding: 50px 0px; }
+  margin: 0 auto; }
+
+.Navigation {
+  padding: 20px 0;
+  overflow: hidden; }
+  .Navigation a {
+    margin-left: 20px;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 0.8em;
+    font-weight: 400;
+    text-transform: uppercase; }
+  .Navigation a:hover {
+    text-decoration: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.87); }
+  .Navigation .toggle-sidebar {
+    visibility: hidden;
+    text-decoration: none; }
+    @media screen and (max-width: 480px) {
+      .Navigation .toggle-sidebar {
+        visibility: visible; } }
+    .Navigation .toggle-sidebar:hover {
+      border-bottom: none; }
+
+.Sidebar {
+  float: left;
+  position: fixed;
+  z-index: 100;
+  width: 200px;
+  height: 100%;
+  overflow: auto;
+  padding: 0;
+  margin: 0;
+  font-size: 0.8em;
+  border-right: 1px solid rgba(0, 0, 0, 0.1); }
+  @media screen and (max-width: 480px) {
+    .Sidebar {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s 0.3s, opacity 0.3s linear;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      padding: 20px 0;
+      overflow-x: hidden;
+      background: rgba(255, 255, 255, 0.95); } }
+  .Sidebar .toggle-sidebar {
+    visibility: hidden;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 20px; }
+    @media screen and (max-width: 480px) {
+      .Sidebar .toggle-sidebar {
+        visibility: visible; } }
+    .Sidebar .toggle-sidebar:hover {
+      text-decoration: none; }
+  .Sidebar.toggled {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s linear; }
+
+.Sidebar-group {
+  display: block;
+  margin: 20px 0;
+  padding: 0 20px; }
+  .Sidebar-group:first-child {
+    margin-top: 0; }
+  .Sidebar-group ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .Sidebar-group ul > li {
+    margin: 0;
+    padding: 0 0 0 8px;
+    line-height: 30px;
+    font-weight: 300; }
+    .Sidebar-group ul > li .active {
+      font-weight: bold; }
+  .Sidebar-group a {
+    color: rgba(0, 0, 0, 0.87); }
+    .Sidebar-group a:hover {
+      color: black;
+      text-decoration: none; }
+      .Sidebar-group a:hover:before {
+        content: "#";
+        margin-left: -10px;
+        position: absolute;
+        color: rgba(0, 0, 0, 0.87); }
+  .Sidebar-group .active {
+    font-weight: bold; }
+
+.Sidebar-title {
+  font-weight: 600;
+  line-height: 30px; }
 
 .Section-title {
   font-size: 2em;
@@ -76,78 +177,66 @@ pre {
     .Projects {
       margin-left: 0; } }
 
+.Post-meta {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  text-transform: uppercase; }
+
 .Post-title {
+  margin: 0;
+  margin-left: -3px;
   font-size: 2em;
   font-weight: 400; }
   .Post-title a {
     color: rgba(0, 0, 0, 0.87);
     text-decoration: none; }
+  .Post-title a:hover:before {
+    content: "#";
+    margin-left: -25px;
+    position: absolute; }
+
+.Post-content img {
+  height: auto;
+  max-width: 100%;
+  max-width: calc(100% + 60px);
+  margin-left: -30px;
+  margin-right: -30px; }
+
+.Post-tags {
+  font-size: 0.7em; }
+  .Post-tags a {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.54);
+    transition: color .3s ease; }
+  .Post-tags a:hover {
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none; }
+  .Post-tags a:before {
+    content: "\0023"; }
 
 .Docs article {
   padding: 0;
   margin-left: 300px;
   line-height: 1.5em; }
-  .Docs article h1:after {
-    content: '';
-    display: block;
-    margin: 20px 0 0;
-    width: 50px;
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.54); }
-  .Docs article h2:before {
-    content: "#";
-    margin-left: -25px;
-    position: absolute;
-    font-size: 28px;
-    color: rgba(0, 0, 0, 0.54); }
+  @media screen and (max-width: 480px) {
+    .Docs article {
+      margin-left: 0px; } }
+  .Docs article h1 {
+    margin: 20px 0 40px 0;
+    font-size: 2em;
+    font-weight: 400; }
+
+.Docs-lead {
+  color: rgba(0, 0, 0, 0.54); }
+
+.Header {
+  overflow: hidden; }
+  .Header .Navigation {
+    float: right; }
 
 .Footer {
   margin: 40px 0 20px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.17); }
-
-.Navigation {
-  padding: 20px 0;
-  text-align: center; }
-  .Navigation a {
-    margin-left: 20px;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.87); }
-  .Navigation a:hover {
-    text-decoration: none;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.87); }
-
-.Sidebar {
-  float: left;
-  width: 200px;
-  padding: 10px;
-  font-size: 0.7em;
-  border-right: 1px solid rgba(0, 0, 0, 0.1); }
-  .Sidebar a {
-    color: rgba(0, 0, 0, 0.87); }
-    .Sidebar a:hover {
-      text-decoration: none;
-      color: black; }
-      .Sidebar a:hover:before {
-        content: "|";
-        margin-left: -10px;
-        position: absolute;
-        color: rgba(0, 0, 0, 0.87); }
-
-.Sidebar-group {
-  display: block;
-  margin: 20px 0; }
-  .Sidebar-group:first-child {
-    margin-top: 0; }
-  .Sidebar-group ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-  .Sidebar-group ul > li {
-    margin: 0;
-    padding: 0 0 0 8px;
-    line-height: 30px;
-    font-weight: 300; }
-
-.Sidebar-title {
-  font-weight: 600;
-  line-height: 30px; }
+  /*border-top: 1px solid rgba(0, 0, 0, 0.17);*/ }

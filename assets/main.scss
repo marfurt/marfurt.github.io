@@ -5,6 +5,7 @@
 $text-color: rgba(0, 0, 0, 0.87);
 $secondary-text: rgba(0, 0, 0, 0.54);
 $break-size: 768px;
+$smartphone-size: 480px;
 
 html, body {
 	color: $text-color;
@@ -23,16 +24,146 @@ a {
 }
 pre {
 	padding: 10px;
-	background: rgba(238, 238, 238, 0.35);
+	background: #f5f6fa;
 	border-radius: 3px;
 	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
+}
+pre.highlight {
+}
+hr {
+	max-width: 60%;
+	margin: 40px auto;
+	color: $secondary-text;
 }
 .container {
 	width: 1024px;
 	max-width: 90%;
 	margin: 0 auto;
-	padding: 50px 0px;
+}
+.Navigation {
+	padding: 20px 0;
+	overflow: hidden;
+
+	a {
+		margin-left: 20px;
+		color: $text-color;
+		font-size: 0.8em;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+	a:hover {
+		text-decoration: none;
+		border-bottom: 2px solid $text-color;
+	}
+
+	.toggle-sidebar {
+		visibility: hidden;
+		text-decoration: none;
+
+		@media screen and (max-width: $smartphone-size) {
+			visibility: visible;
+		}
+
+		&:hover {
+			border-bottom: none;
+		}
+	}
+}
+.Sidebar {
+	float: left;
+	position: fixed;
+	z-index: 100;
+	width: 200px;
+	height: 100%;
+	overflow: auto;
+	padding: 0;
+	margin: 0;
+	font-size: 0.8em;
+	border-right: 1px solid rgba(0, 0, 0, .1);
+
+	@media screen and (max-width: $smartphone-size) {
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0s 0.3s, opacity 0.3s linear;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		padding: 20px 0;
+		overflow-x: hidden;
+		background: rgba(255, 255, 255, .95);
+	}
+
+	.toggle-sidebar {
+		visibility: hidden;
+		position: absolute;
+		top: 20px;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 20px;
+	
+		@media screen and (max-width: $smartphone-size) {
+			visibility: visible;
+		}
+	
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&.toggled {
+		visibility: visible;
+		opacity: 1;
+		transition: opacity 0.3s linear;
+	}
+}
+.Sidebar-group {
+	display: block;
+	margin: 20px 0;
+	padding: 0 20px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	ul > li {
+		margin: 0;
+		padding: 0 0 0 8px;
+		line-height: 30px;
+		font-weight: 300;
+
+		.active {
+			font-weight: bold;
+		}
+	}
+	a {
+		color: $text-color;
+
+		&:hover {
+			color: black;
+			text-decoration: none;
+
+			&:before {
+				content: "#";
+				margin-left: -10px;
+				position: absolute;
+				color: $text-color;
+			}
+		}
+	}
+	.active {
+		font-weight: bold;
+	}
+}
+.Sidebar-title {
+	font-weight: 600;
+	line-height: 30px;
 }
 .Section-title {
 	font-size: 2em;
@@ -95,7 +226,17 @@ pre {
 }
 .Post {}
 .Post-header {}
+.Post-meta {
+	margin: 0;
+	color: $secondary-text;
+	font-size: 0.8em;
+	letter-spacing: 1px;
+	line-height: 1.5;
+	text-transform: uppercase;
+}
 .Post-title {
+	margin: 0;
+	margin-left: -3px;
 	font-size: 2em;
 	font-weight: 400;
 
@@ -103,100 +244,67 @@ pre {
 		color: $text-color;
 		text-decoration: none;
 	}
+	a:hover:before {
+		content: "#";
+		margin-left: -25px;
+		position: absolute;
+	}
 }
-.Post-meta {}
-.Post-content {}
-.Post-extra {}
+.Post-content {
+	img {
+		height: auto;
+		max-width: 100%;
+		max-width: calc(100% + 60px);
+		margin-left: -30px;
+		margin-right: -30px;
+	}
+}
+.Post-tags {
+	font-size: 0.7em;
+
+	a {
+		cursor: pointer;
+		color: $secondary-text;
+		transition: color .3s ease;
+	}
+	a:hover {
+		color: $text-color;
+		text-decoration: none;
+	}
+	a:before {
+		content: "\0023";
+	}
+}
 .Docs {
 	article {
 		padding: 0;
 		margin-left: 300px;
 		line-height: 1.5em;
 
-		h1:after {
-			content: '';
-			display: block;
-			margin: 20px 0 0;
-			width: 50px;
-			height: 1px;
-			background-color: $secondary-text;
+		@media screen and (max-width: $smartphone-size) {
+			margin-left: 0px;
 		}
 
-		h2 {}
-		h2:before {
-			content: "#";
-			margin-left: -25px;
-			position: absolute;
-			font-size: 28px;
-			color: $secondary-text;
+		h1 {
+			margin: 20px 0 40px 0;
+			font-size: 2em;
+			font-weight: 400;
 		}
+		h2 {}
 	}
 }
 .Docs-title {}
-.Docs-lead {}
+.Docs-lead {
+	color: $secondary-text;
+}
+.Header {
+	overflow: hidden;
+
+	.Navigation {
+		float: right;
+	}
+}
 .Footer {
 	margin: 40px 0 20px 0;
-	border-top: 1px solid rgba(0, 0, 0, 0.17);
-}
-.Navigation {
-	padding: 20px 0;
-	text-align: center;
-
-	a {
-		margin-left: 20px;
-		font-weight: 400;
-		color: $text-color;
-	}
-	a:hover {
-		text-decoration: none;
-		border-bottom: 2px solid $text-color;
-	}
-}
-.Sidebar {
-	float: left;
-	width: 200px;
-	padding: 10px;
-	font-size: 0.7em;
-	border-right: 1px solid rgba(0, 0, 0, .1);
-
-	a {
-		color: $text-color;
-
-		&:hover {
-			text-decoration: none;
-			color: black;
-
-			&:before {
-				content: "|";
-				margin-left: -10px;
-				position: absolute;
-				color: $text-color;
-			}
-		}
-	}
-}
-.Sidebar-group {
-	display: block;
-	margin: 20px 0;
-
-	&:first-child {
-		margin-top: 0;
-	}
-	ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-	ul > li {
-		margin: 0;
-		padding: 0 0 0 8px;
-		line-height: 30px;
-		font-weight: 300;
-	}
-	.active {
-	}
-}
-.Sidebar-title {
-	font-weight: 600;
-	line-height: 30px;
+	/*border-top: 1px solid rgba(0, 0, 0, 0.17);*/
 }
