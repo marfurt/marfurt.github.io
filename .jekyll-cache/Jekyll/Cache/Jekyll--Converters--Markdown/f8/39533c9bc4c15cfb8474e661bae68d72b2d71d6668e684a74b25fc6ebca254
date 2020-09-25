@@ -1,65 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  
-	<title>
-	
-		Remote Access and Keys &middot; Nicolas Prallet-Marfurt
-	
-	</title>
-	
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,400italic,600" rel="stylesheet" type="text/css">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-	<link href="/assets/main.css" rel="stylesheet">
-	<link href="/assets/syntax.css" rel="stylesheet">
-</head>
-
-	<body class="Docs">
-		<div class="container">
-			<header class="Header">
-	<nav class="Navigation">
-		<a href="/">About</a>
-		<a href="/posts">Articles</a>
-		<a href="/docs">Docs</a>
-		<a href="#" class="toggle-sidebar">☰</a>
-	</nav>
-</header>
-
-			<nav id="DocsSidebar" class="Sidebar">
-	<a href="#" class="toggle-sidebar">&times;</a><div class="Sidebar-group">
-		<a class="Sidebar-title" href="/docs/mobile/xcode-tips/">
-			Mobile
-		</a>
-	
-		<ul><li>
-				<a href="/docs/mobile/xcode-tips/">Xcode Tips</a>
-			</li></ul>
-	</div><div class="Sidebar-group">
-		<a class="Sidebar-title" href="/docs/web/gzip-compression/">
-			Web
-		</a>
-	
-		<ul><li>
-				<a href="/docs/web/gzip-compression/">Gzip Compression</a>
-			</li></ul>
-	</div><div class="Sidebar-group active">
-		<a class="Sidebar-title" href="/docs/tools/remote-access-and-keys/">
-			Tools
-		</a>
-	
-		<ul><li class="active">
-				<a href="/docs/tools/remote-access-and-keys/">Remote Access and Keys</a>
-			</li></ul>
-	</div></nav>
-	
-			<article>
-				<h1 class="Docs-title">Remote Access and Keys</h1>
-				<!--<p class="Docs-lead">Learn about SSH</p>-->
-				<p>Secure Shell (SSH) est un programme informatique et un protocole de communication sécurisé permettant d’obtenir une communication où tous les segments TCP sont authentifiés et chiffrés.</p>
+I"<p>Secure Shell (SSH) est un programme informatique et un protocole de communication sécurisé permettant d’obtenir une communication où tous les segments TCP sont authentifiés et chiffrés.</p>
 
 <p>L’authentification peut se faire soit avec un mot de passe, soit en utilisant la cryptographie asymétrique, ce qui évite la saisie d’un mot de passe. Dans ce cas, la clé publique est distribuée sur les systèmes sur lesquels on souhaite se connecter, alors que la clé privée (qu’on prendra le soin de protéger par un mot de passe) reste uniquement sur le poste à partir duquel on se connecte.</p>
 
@@ -143,21 +82,4 @@ $ cat ../my_key_rsa.pub &gt;&gt; authorized_keys
 $ rm ../my_key_rsa.pub
 </code></pre></div></div>
 
-
-			</article>
-
-			<section class="Footer"></section>
-
-		</div>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('.toggle-sidebar').click(function(e) {
-					$('.Sidebar').toggleClass('toggled');
-					e.preventDefault();
-				});
-			});
-		</script>
-	</body>
-</html>
+:ET

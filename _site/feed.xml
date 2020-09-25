@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-09-25T16:58:05+02:00</updated><id>/feed.xml</id><title type="html">Nicolas Marfurt</title><subtitle>Personal website and blog of Nicolas Marfurt</subtitle><entry xml:lang="fr"><title type="html">RESTful Web services</title><link href="/web/api/2015/02/01/restful-web-services.html" rel="alternate" type="text/html" title="RESTful Web services" /><published>2015-02-01T12:00:00+01:00</published><updated>2015-02-01T12:00:00+01:00</updated><id>/web/api/2015/02/01/restful-web-services</id><content type="html" xml:base="/web/api/2015/02/01/restful-web-services.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-09-25T18:11:59+02:00</updated><id>/feed.xml</id><title type="html">Nicolas Prallet-Marfurt</title><subtitle>Personal website and blog of Nicolas Prallet-Marfurt</subtitle><entry xml:lang="fr"><title type="html">RESTful Web services</title><link href="/web/api/2015/02/01/restful-web-services.html" rel="alternate" type="text/html" title="RESTful Web services" /><published>2015-02-01T12:00:00+01:00</published><updated>2015-02-01T12:00:00+01:00</updated><id>/web/api/2015/02/01/restful-web-services</id><content type="html" xml:base="/web/api/2015/02/01/restful-web-services.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;A RESTful web service is a Web service implemented using HTTP and the principles of REST. Representational State Transfer (REST) is a style of software architecture for distributed systems, introduced and defined in 2000 by Roy Fielding in &lt;a href=&quot;http://www.ics.uci.edu/fielding/pubs/dissertation/restarchstyle.htm&quot;&gt;his doctoral dissertation&lt;/a&gt;. Fielding is one of the principal authors of the Hypertext Transfer Protocol (HTTP) specification versions 1.0 and 1.1. The Resource-Oriented Architecture (ROA) is a commonsense set of rules for designing RESTful Web services, introduced by Leonard Richardson et Sam Ruby in the book RESTful Web services.&lt;/p&gt;
 
@@ -29,7 +29,7 @@
 &lt;ul&gt;
   &lt;li&gt;URIs (uniform resource identifier)&lt;/li&gt;
   &lt;li&gt;Internet media types (MIME types or Content types)&lt;/li&gt;
-  &lt;li&gt;methods (&lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;PUT&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;DELETE&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HEAD&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;OPTIONS&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;methods (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GET&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;POST&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PUT&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DELETE&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HEAD&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OPTIONS&lt;/code&gt;)&lt;/li&gt;
   &lt;li&gt;response codes&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -58,18 +58,18 @@ Ex: /parent/child1;child?start=10&lt;/p&gt;
 &lt;p&gt;The HTTP method corresponds to the HTTP &lt;em&gt;verb&lt;/em&gt;, or &lt;em&gt;action&lt;/em&gt;, and indicates how the client expects the sever to process this envelope. The following methods are used:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt;: retrieve information&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt;: create a new entry (from parent)&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;PUT&lt;/code&gt;: update an existing entry or create a new one (with all information)&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;DELETE&lt;/code&gt;: delete an existing resource&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;HEAD&lt;/code&gt;: retrieve a metadata-only representation&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;OPTIONS&lt;/code&gt;: check which HTTP methods a particular resource supports&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GET&lt;/code&gt;: retrieve information&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;POST&lt;/code&gt;: create a new entry (from parent)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PUT&lt;/code&gt;: update an existing entry or create a new one (with all information)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DELETE&lt;/code&gt;: delete an existing resource&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HEAD&lt;/code&gt;: retrieve a metadata-only representation&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OPTIONS&lt;/code&gt;: check which HTTP methods a particular resource supports&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; method can be overloaded for some specific reasons, such as:&lt;/p&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;POST&lt;/code&gt; method can be overloaded for some specific reasons, such as:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;simulating &lt;code class=&quot;highlighter-rouge&quot;&gt;PUT&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;DELETE&lt;/code&gt; for clients that do not support them&lt;/li&gt;
+  &lt;li&gt;simulating &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PUT&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DELETE&lt;/code&gt; for clients that do not support them&lt;/li&gt;
   &lt;li&gt;a workaround for max length URI (ex: Apache = 8KB)&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -83,7 +83,7 @@ Ex: /parent/child1;child?start=10&lt;/p&gt;
 
 &lt;h3 id=&quot;media-types-format&quot;&gt;Media types (format)&lt;/h3&gt;
 
-&lt;p&gt;REST is not tied up to any specific format. Usually though, common representations like &lt;code class=&quot;highlighter-rouge&quot;&gt;XML&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;ATOM&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;JSON&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;JPEG&lt;/code&gt;, etc… are used, compressed or not.&lt;/p&gt;
+&lt;p&gt;REST is not tied up to any specific format. Usually though, common representations like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;XML&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ATOM&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JSON&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JPEG&lt;/code&gt;, etc… are used, compressed or not.&lt;/p&gt;
 
 &lt;h2 id=&quot;documenting-a-restful-web-service&quot;&gt;Documenting a RESTful Web service&lt;/h2&gt;
 

@@ -1,65 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  
-	<title>
-	
-		Compression serveur GZip &middot; Nicolas Prallet-Marfurt
-	
-	</title>
-	
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,400italic,600" rel="stylesheet" type="text/css">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-	<link href="/assets/main.css" rel="stylesheet">
-	<link href="/assets/syntax.css" rel="stylesheet">
-</head>
-
-	<body class="Docs">
-		<div class="container">
-			<header class="Header">
-	<nav class="Navigation">
-		<a href="/">About</a>
-		<a href="/posts">Articles</a>
-		<a href="/docs">Docs</a>
-		<a href="#" class="toggle-sidebar">☰</a>
-	</nav>
-</header>
-
-			<nav id="DocsSidebar" class="Sidebar">
-	<a href="#" class="toggle-sidebar">&times;</a><div class="Sidebar-group">
-		<a class="Sidebar-title" href="/docs/mobile/xcode-tips/">
-			Mobile
-		</a>
-	
-		<ul><li>
-				<a href="/docs/mobile/xcode-tips/">Xcode Tips</a>
-			</li></ul>
-	</div><div class="Sidebar-group active">
-		<a class="Sidebar-title" href="/docs/web/gzip-compression/">
-			Web
-		</a>
-	
-		<ul><li class="active">
-				<a href="/docs/web/gzip-compression/">Gzip Compression</a>
-			</li></ul>
-	</div><div class="Sidebar-group">
-		<a class="Sidebar-title" href="/docs/tools/remote-access-and-keys/">
-			Tools
-		</a>
-	
-		<ul><li>
-				<a href="/docs/tools/remote-access-and-keys/">Remote Access and Keys</a>
-			</li></ul>
-	</div></nav>
-	
-			<article>
-				<h1 class="Docs-title">Compression serveur GZip</h1>
-				<!--<p class="Docs-lead">Learn about gzip compression on server-side.</p>-->
-				<h2 id="client">Client</h2>
+I"k
+<h2 id="client">Client</h2>
 
 <p>La requête doit contenir le header <code class="language-plaintext highlighter-rouge">Accept-Encoding: gzip, deflate</code>.</p>
 
@@ -131,21 +71,4 @@ else {
 <h2 id="liens-utiles">Liens utiles</h2>
 
 <p>http://www.alsacreations.com/article/lire/914-compression-pages-html-css-gzip-deflate.html</p>
-
-			</article>
-
-			<section class="Footer"></section>
-
-		</div>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('.toggle-sidebar').click(function(e) {
-					$('.Sidebar').toggleClass('toggled');
-					e.preventDefault();
-				});
-			});
-		</script>
-	</body>
-</html>
+:ET

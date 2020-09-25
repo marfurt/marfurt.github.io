@@ -1,49 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  
-	<title>
-	
-		RESTful Web services &middot; Nicolas Prallet-Marfurt
-	
-	</title>
-	
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,400italic,600" rel="stylesheet" type="text/css">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-	<link href="/assets/main.css" rel="stylesheet">
-	<link href="/assets/syntax.css" rel="stylesheet">
-</head>
-
-	<body class="">
-		<div class="container">
-			<header class="Header">
-	<nav class="Navigation">
-		<a href="/">About</a>
-		<a href="/posts">Articles</a>
-		<a href="/docs">Docs</a>
-		<a href="#" class="toggle-sidebar">☰</a>
-	</nav>
-</header>
-
-			<main>
-				<article class="Post">
-	<header class="Post-header">
-		<p class="Post-meta">
-	  		<time class="Post-date" datetime="2015-02-01T12:00:00+01:00">
-			
-			Feb 1, 2015
-			</time>
-			
-		</p>
-		<h1 class="Post-title"><a href="/web/api/2015/02/01/restful-web-services.html">RESTful Web services</a></h1>
-  	</header>
-
-	<div class="Post-content">
-		<h2 id="introduction">Introduction</h2>
+I"'<h2 id="introduction">Introduction</h2>
 
 <p>A RESTful web service is a Web service implemented using HTTP and the principles of REST. Representational State Transfer (REST) is a style of software architecture for distributed systems, introduced and defined in 2000 by Roy Fielding in <a href="http://www.ics.uci.edu/fielding/pubs/dissertation/restarchstyle.htm">his doctoral dissertation</a>. Fielding is one of the principal authors of the Hypertext Transfer Protocol (HTTP) specification versions 1.0 and 1.1. The Resource-Oriented Architecture (ROA) is a commonsense set of rules for designing RESTful Web services, introduced by Leonard Richardson et Sam Ruby in the book RESTful Web services.</p>
 
@@ -162,17 +117,4 @@ Ex: /parent/child1;child?start=10</p>
   <li>http://predic8.com/rest-webservices.htm</li>
 </ul>
 
-
-	</div>
-
-	<p class="Post-tags">
-	
-	</p>
-</article>
-			</main>
-
-			<section class="Footer"></section>
-
-		</div>
-	</body>
-</html>
+:ET

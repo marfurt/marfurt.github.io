@@ -7,8 +7,8 @@ source "https://rubygems.org"
 #     bundle exec jekyll serve
 #
 
-gem "jekyll", "~> 3.8.5"
-gem "minima", "~> 2.0"
+gem "jekyll"
+gem "minima"
 gem "rouge"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
@@ -18,7 +18,7 @@ gem "rouge"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
 	gem "jekyll-paginate"
-	gem "jekyll-feed", "~> 0.6"
+	gem "jekyll-feed"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -8,7 +8,7 @@
   
 	<title>
 	
-		Articles &middot; Nicolas Marfurt
+		Articles &middot; Nicolas Prallet-Marfurt
 	
 	</title>
 	
@@ -75,7 +75,7 @@
 <ul>
   <li>URIs (uniform resource identifier)</li>
   <li>Internet media types (MIME types or Content types)</li>
-  <li>methods (<code class="highlighter-rouge">GET</code>, <code class="highlighter-rouge">POST</code>, <code class="highlighter-rouge">PUT</code>, <code class="highlighter-rouge">DELETE</code>, <code class="highlighter-rouge">HEAD</code>, <code class="highlighter-rouge">OPTIONS</code>)</li>
+  <li>methods (<code class="language-plaintext highlighter-rouge">GET</code>, <code class="language-plaintext highlighter-rouge">POST</code>, <code class="language-plaintext highlighter-rouge">PUT</code>, <code class="language-plaintext highlighter-rouge">DELETE</code>, <code class="language-plaintext highlighter-rouge">HEAD</code>, <code class="language-plaintext highlighter-rouge">OPTIONS</code>)</li>
   <li>response codes</li>
 </ul>
 
@@ -104,18 +104,18 @@ Ex: /parent/child1;child?start=10</p>
 <p>The HTTP method corresponds to the HTTP <em>verb</em>, or <em>action</em>, and indicates how the client expects the sever to process this envelope. The following methods are used:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">GET</code>: retrieve information</li>
-  <li><code class="highlighter-rouge">POST</code>: create a new entry (from parent)</li>
-  <li><code class="highlighter-rouge">PUT</code>: update an existing entry or create a new one (with all information)</li>
-  <li><code class="highlighter-rouge">DELETE</code>: delete an existing resource</li>
-  <li><code class="highlighter-rouge">HEAD</code>: retrieve a metadata-only representation</li>
-  <li><code class="highlighter-rouge">OPTIONS</code>: check which HTTP methods a particular resource supports</li>
+  <li><code class="language-plaintext highlighter-rouge">GET</code>: retrieve information</li>
+  <li><code class="language-plaintext highlighter-rouge">POST</code>: create a new entry (from parent)</li>
+  <li><code class="language-plaintext highlighter-rouge">PUT</code>: update an existing entry or create a new one (with all information)</li>
+  <li><code class="language-plaintext highlighter-rouge">DELETE</code>: delete an existing resource</li>
+  <li><code class="language-plaintext highlighter-rouge">HEAD</code>: retrieve a metadata-only representation</li>
+  <li><code class="language-plaintext highlighter-rouge">OPTIONS</code>: check which HTTP methods a particular resource supports</li>
 </ul>
 
-<p>The <code class="highlighter-rouge">POST</code> method can be overloaded for some specific reasons, such as:</p>
+<p>The <code class="language-plaintext highlighter-rouge">POST</code> method can be overloaded for some specific reasons, such as:</p>
 
 <ul>
-  <li>simulating <code class="highlighter-rouge">PUT</code> and <code class="highlighter-rouge">DELETE</code> for clients that do not support them</li>
+  <li>simulating <code class="language-plaintext highlighter-rouge">PUT</code> and <code class="language-plaintext highlighter-rouge">DELETE</code> for clients that do not support them</li>
   <li>a workaround for max length URI (ex: Apache = 8KB)</li>
 </ul>
 
@@ -129,7 +129,7 @@ Ex: /parent/child1;child?start=10</p>
 
 <h3 id="media-types-format">Media types (format)</h3>
 
-<p>REST is not tied up to any specific format. Usually though, common representations like <code class="highlighter-rouge">XML</code>, <code class="highlighter-rouge">ATOM</code>, <code class="highlighter-rouge">JSON</code>, <code class="highlighter-rouge">JPEG</code>, etc… are used, compressed or not.</p>
+<p>REST is not tied up to any specific format. Usually though, common representations like <code class="language-plaintext highlighter-rouge">XML</code>, <code class="language-plaintext highlighter-rouge">ATOM</code>, <code class="language-plaintext highlighter-rouge">JSON</code>, <code class="language-plaintext highlighter-rouge">JPEG</code>, etc… are used, compressed or not.</p>
 
 <h2 id="documenting-a-restful-web-service">Documenting a RESTful Web service</h2>
 

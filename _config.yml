@@ -6,9 +6,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Nicolas Marfurt
+title: Nicolas Prallet-Marfurt
 description: >- # this means to ignore newlines until "baseurl:"
-  Personal website and blog of Nicolas Marfurt
+  Personal website and blog of Nicolas Prallet-Marfurt
 paginate: 5
 paginate_path: "/posts/page:num/"
 
