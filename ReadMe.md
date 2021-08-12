@@ -17,7 +17,7 @@ Build the site and make it available on a local server (see `http://localhost:40
 
 Generate the site for production:
 
-	jekyll build
+	bundle exec jekyll build
 
 
 ## Ruby

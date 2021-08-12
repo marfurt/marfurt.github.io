@@ -76,9 +76,11 @@ hr { max-width: 60%; margin: 40px auto; color: rgba(0, 0, 0, 0.54); }
 
 @media screen and (max-width: 768px) { .About { margin-left: 0; } }
 
-.Projects { margin-left: 350px; }
+.Projects, .Presentations { margin-left: 350px; }
 
-@media screen and (max-width: 768px) { .Projects { margin-left: 0; } }
+@media screen and (max-width: 768px) { .Projects, .Presentations { margin-left: 0; } }
+
+.Presentations-presentation { max-width: 400px; }
 
 .Post-meta { margin: 0; color: rgba(0, 0, 0, 0.54); font-size: 0.8em; letter-spacing: 1px; line-height: 1.5; text-transform: uppercase; }
 
