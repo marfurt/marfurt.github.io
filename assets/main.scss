@@ -2,32 +2,57 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+$background-color: #f5f6fa;
 $text-color: rgba(0, 0, 0, 0.87);
 $secondary-text: rgba(0, 0, 0, 0.54);
+$link-color: #000;
 $break-size: 768px;
 $smartphone-size: 480px;
 
+$background-color-dark: #111111;
+$text-color-dark: #ddd;
+$secondary-text-dark: #8a8a8a;
+$link-color-dark: #fafafa;
+
 html, body {
+	background: $background-color;
 	color: $text-color;
 	font-size: 22px;
 	font-weight: 300;
 	font-family: "Source Sans Pro", "SF Pro Display", "HelveticaNeue", "Helvetica", Arial, sans-serif;
+
+	@media (prefers-color-scheme: dark) {
+		color: $text-color-dark;
+		background: $background-color-dark;
+	}
 }
 a {
 	color: $secondary-text;
 	text-decoration: none;
 
+	@media (prefers-color-scheme: dark) {
+		color: $secondary-text-dark;
+	}
+
 	&:hover {
 		color: $text-color;
 		text-decoration: underline;
+
+		@media (prefers-color-scheme: dark) {
+			color: $text-color-dark;
+		}
 	}
 }
 pre {
 	padding: 10px;
-	background: #f5f6fa;
+	background: $background-color;
 	border-radius: 3px;
 	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
+
+	@media (prefers-color-scheme: dark) {
+		background: $background-color-dark;
+	}
 }
 pre.highlight {
 }
@@ -35,6 +60,10 @@ hr {
 	max-width: 60%;
 	margin: 40px auto;
 	color: $secondary-text;
+
+	@media (prefers-color-scheme: dark) {
+		color: $secondary-text-dark;
+	}
 }
 .container {
 	width: 1024px;
@@ -51,10 +80,15 @@ hr {
 		font-size: 0.8em;
 		font-weight: 400;
 		text-transform: uppercase;
-	}
-	a:hover {
-		text-decoration: none;
-		border-bottom: 2px solid $text-color;
+
+		@media (prefers-color-scheme: dark) {
+			color: $text-color-dark;
+		}
+
+		&:hover {
+			text-decoration: none;
+			border-bottom: 2px solid $text-color;
+		}
 	}
 
 	.toggle-sidebar {
@@ -145,9 +179,17 @@ hr {
 	a {
 		color: $text-color;
 
+		@media (prefers-color-scheme: dark) {
+			color: $text-color-dark;
+		}
+
 		&:hover {
-			color: black;
+			color: $link-color;
 			text-decoration: none;
+
+			@media (prefers-color-scheme: dark) {
+				color: $link-color-dark;
+			}
 
 			&:before {
 				content: "#";
@@ -167,7 +209,7 @@ hr {
 }
 .Section-title {
 	font-size: 2em;
-	font-weight: 400;
+	font-weight: 600;
 }
 .Section-subtitle {
 	color: $secondary-text;
@@ -236,6 +278,10 @@ hr {
 	letter-spacing: 1px;
 	line-height: 1.5;
 	text-transform: uppercase;
+
+	@media (prefers-color-scheme: dark) {
+		color: $secondary-text-dark;
+	}
 }
 .Post-title {
 	margin: 0;
@@ -246,6 +292,10 @@ hr {
 	a {
 		color: $text-color;
 		text-decoration: none;
+
+		@media (prefers-color-scheme: dark) {
+			color: $text-color-dark;
+		}
 	}
 	a:hover:before {
 		content: "#";
@@ -269,10 +319,18 @@ hr {
 		cursor: pointer;
 		color: $secondary-text;
 		transition: color .3s ease;
+
+		@media (prefers-color-scheme: dark) {
+			color: $secondary-text-dark;
+		}
 	}
 	a:hover {
 		color: $text-color;
 		text-decoration: none;
+
+		@media (prefers-color-scheme: dark) {
+			color: $text-color-dark;
+		}
 	}
 	a:before {
 		content: "\0023";
@@ -299,6 +357,10 @@ hr {
 .Docs-title {}
 .Docs-lead {
 	color: $secondary-text;
+
+	@media screen and (max-width: $smartphone-size) {
+		color: $secondary-text-dark;
+	}
 }
 .Header {
 	overflow: hidden;
