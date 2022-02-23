@@ -266,6 +266,15 @@ hr {
 		margin-left: 0;
 	}
 }
+.Presentations-grid {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(2, 1fr);
+
+	@media screen and (max-width: $break-size) {
+		grid-template-columns: 1fr;
+	}
+}
 .Presentations-presentation {
 	max-width: 400px;
 }

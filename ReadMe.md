@@ -6,19 +6,21 @@
 - Documentation: `/docs`
 - Articles (blog): `/posts`
 
-
 ## Jekyll
 
 The Website is built using [Jekyll](https://jekyllrb.com).
 
 Build the site and make it available on a local server (see `http://localhost:4000`):
 
-	bundle exec jekyll serve --livereload
+```shell
+bundle exec jekyll serve --livereload
+```
 
 Generate the site for production:
 
-	bundle exec jekyll build
-
+```shell
+bundle exec jekyll build
+```
 
 ## Ruby
 
